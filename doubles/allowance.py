@@ -13,13 +13,15 @@ _any = object()
 
 def _get_future():
     try:
-        from concurrent.futures import Future
+        # from concurrent.futures import Future
+        from asyncio import Future
     except ImportError:
         try:
             from tornado.concurrent import Future
         except ImportError:
             raise ImportError(
-                'Error Importing Future, Could not find concurrent.futures or tornado.concurrent',
+                # 'Error Importing Future, Could not find concurrent.futures or tornado.concurrent',
+                'Error Importing Future, Could not find asyncio or tornado.concurrent',
             )
     return Future()
 
