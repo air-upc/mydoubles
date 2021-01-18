@@ -24,13 +24,13 @@ class PyTest(TestCommand):
         sys.exit(errcode)
 
 setup(
-    name='doubles',
+    name='mydoubles',
     version=version,
     description='Test doubles for Python.',
     long_description=long_description,
     author='Jimmy Cuadra',
     author_email='jimmy@uber.com',
-    url='https://github.com/uber/doubles',
+    url='https://github.com/air-upc/mydoubles',
     license='MIT',
     packages=['doubles', 'doubles.targets'],
     install_requires=['six'],
